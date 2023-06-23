@@ -1,0 +1,113 @@
+<!--
+	Name: Joan Montas
+	Email: Joan_Montas@student.uml.edu
+	File: index.html
+	GUI Assignment: GUI, HW4 : PART 2: jQuery UI Slider and Tab Widgets
+	Date:06/23/2023
+	Description: Create a dynamic multiplication table.
+        Certain error handling was added using jquery validation plugins.
+        Jquery ui plugins was used to create slider and tabs.
+        Boostrap used for styling.
+	Copyright (c) 2023 by Joan Montas. All rights reserved.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!-- jquery ui -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/smoothness/jquery-ui.css">
+
+    <link href="./css/style.css" rel="stylesheet">
+    <title>Multiplication</title>
+</head>
+<body>
+    <div id="wrapper" class="container">
+        <h1> Multiplication Table Generator </h1>
+        <div class="row">
+            <div id="forminputs" class="col-md-6">
+                <form id="theform" class="form-group">
+                    <label for="numberone">Minimum Column Value:</label><br>
+                    <div id="numberonerange"></div>
+                    <input type="number" id="numberone" name="numberone"><br>
+
+                    <label for="numbertwo">Maximum Column Value:</label><br>
+                    <div id="numbertworange"></div>
+                    <input type="number" id="numbertwo" name="numbertwo"><br>
+            
+                    <label for="numberthree">Minimum Row Value:</label><br>
+                    <div id="numberthreerange"></div>
+                    <input type="number" id="numberthree" name="numberthree"><br>
+            
+                    <label for="numberfour">Maximum Row Value:</label><br>
+                    <div id="numberfourrange"></div>
+                    <input type="number" id="numberfour" name="numberfour"><br>
+
+                    <!-- removed submit button as it will automatically submit -->
+                </form>
+            </div> <!-- forminput -->
+
+            <div class="col-md-6">
+                <div id="display">
+                    <table id="thetable">
+                        <!-- tr -->
+                            <!-- td 1 -->
+                            <!-- td 2 -->
+    
+                        <!-- tr -->
+                            <!-- td 3 -->
+                            <!-- td 4 -->
+                        <!-- ... -->
+                    </table>
+                </div> <!-- col -->
+            </div> <!-- display -->
+        </div> <!-- row -->
+
+        <!-- https://jqueryui.com/tabs/#manipulation  -->
+        <button id="addtab" class="btn btn-success">Save your work!</button>
+        <div id="tabs">
+
+            <!-- tab title -->
+            <ul id="tabtitle">
+            </ul>
+
+            <!-- tab content -->
+
+        </div> <!-- tabs -->
+
+        <div id="closeformcontainer">
+            <form id="thecloseform" class="form-group">
+
+                <!-- removed submit button as it will automatically submit -->
+            </form>
+        </div>
+
+        <div class=deactivateinline></div>
+        <button id="closetab" class="btn btn-dark">Close selected tabs</button>
+        <button id="closealltab" class="btn btn-danger">Close all tabs</button>
+
+    </div> <!-- wrapper -->
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+    <!-- jquery validation plugin -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/additional-methods.js"></script>
+
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/es-module-shims@1/dist/es-module-shims.min.js" crossorigin="anonymous"></script>
+
+    <!-- jquery ui -->
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
+    <!-- mine -->
+    <script src="./js/multtable.js" ></script>
+
+</body>
+</html>
